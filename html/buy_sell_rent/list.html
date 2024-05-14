@@ -1,0 +1,19 @@
+{%extends 'home.html'%}{% block tit %}{% endblock %}
+
+<br>{% block top_menu %} {% include "top_menu.html" %} {% endblock %}
+<br>{% block head_model %}
+<div class="center_model_2">
+    <h2 class="">Login</h2>
+    <form action="" class="form_x" method="post" novalidate>
+        {% csrf_token %} {{form.as_div}}
+        <br>
+        <button type="submit" class="button_x red">submit</button>
+        <small>Dont have an account...</small>
+        <a href="{% url 'core:add_user' %}" class="button_x red">Redgister user</a>
+    </form>
+
+</div>{% endblock %}
+<br>{% block body_1 %}{% endblock %}
+<br>{% block body_2 %}{% endblock %}
+<br>{% block bottom_menu %}{% include "bottom_menu.html" %} {% endblock %}
+<br>{% block scripts_area%}{% endblock %}

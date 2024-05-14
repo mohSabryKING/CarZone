@@ -1,0 +1,74 @@
+{%extends 'home.html'%}{% block tit %}{{user_profile.name}} {{user_profile.user_of}}{% endblock %}
+
+<br>{% block top_menu %} {% include "top_menu.html" %} {% endblock %}
+<br>{% block head_model %}
+<div class="center_model_2">
+    <div style="width: 20%;height: 20%;display: grid;justify-self: center;">
+        <img src="{{user_profile.user_img.url}}" alt="" style="border: 3px solid red;border-radius: 50%;" class="user_model">
+
+
+    </div>
+    <h2 class="">{{user_profile.name}} {{user_profile.user_of}}</h2>
+
+
+
+
+    <ul type="none" class="list_model" style="text-align: center;">
+
+        <li>{{user_profile.name}}</li>
+        {% if user_profile.profile_activity == 'وكيل ماركة' %}
+        <li>{{user_profile.profile_activity}}</li>
+        {% include "user_profile\model_1_mark_owner.html" %}
+        <br> {% elif user_profile.profile_activity == 'محل قطع غيار' %}
+        <li>{{user_profile.profile_activity}}</li>
+        {% include "user_profile\model_3_car_parts.html" %}
+        <li>place include model 4</li>
+        {% elif user_profile.profile_activity == 'إيجار' %}
+        <li>{{user_profile.profile_activity}}</li>
+        <li>place include model 3</li>
+        {% elif user_profile.profile_activity == 'وقود' %}
+        <br> {% include "user_profile\model_6_petrol.html" %}
+        <li>{{user_profile.profile_activity}}</li>
+        <li>place include model 2</li>
+        {% elif user_profile.profile_activity == 'شراء' %}
+        <li>{{user_profile.profile_activity}}</li>
+        <li>place include model 1</li>
+
+        {% elif user_profile.profile_activity == 'بيع-إيجار-شراء' %}
+        <li>{{user_profile.profile_activity}}</li>
+        <li>place include model 13</li>
+        {% elif user_profile.profile_activity == 'أكسسوارت' %}
+        <li>{{user_profile.profile_activity}}</li>
+        {% include "model_4_decore.html" %}
+        <li>place include model 14</li> {% else %} {#{% include "user_profile\model_5z.html" %}#}
+
+        <li>{{user_profile.profile_activity}}</li>
+        <li>place include model 0</li>
+        {% endif %}
+
+        <li>phone call:{{user_profile.user_phone}}</li>
+
+
+
+
+    </ul>
+</div>{% endblock %}
+<br>{% block body_1 %}
+<div class="dual_side">
+    <ul class="list_model">
+        <li>{{user_profile.location_as_live}}</li>
+        <li><a href="{{user_profile.location_branch}}" style="color: wheat;">{{user_profile.location_branch}}</a></li>
+
+    </ul>
+
+    <ul class="list_model" style="display: grid;">
+        <a href="" class="button_x red">places of buy</a>
+        <a href="" class="button_x red">places of selleing car parts</a>
+        <a href="" class="button_x red">places of fixing</a>
+        <a href="" class="button_x red">return</a>
+    </ul>
+</div>
+{% endblock %}
+<br>{% block body_2 %}{% endblock %}
+<br>{% block bottom_menu %}{% include "bottom_menu.html" %} {% endblock %}
+<br>{% block scripts_area%}{% endblock %}

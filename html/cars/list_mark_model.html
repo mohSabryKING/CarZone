@@ -1,0 +1,51 @@
+{%extends 'home.html'%}{% block tit %}{{mark}}{% endblock %} {% load static %}
+
+<br>{% block top_menu %} {% include "top_menu.html" %} {% endblock %}
+<br>{% block head_model %}
+<h2 class="">ALL models of {{mark}} mark</h2> {% endblock %}
+<br>{% block body_1 %} {% if models_of_mark %}
+
+<div class="div_4_parts" style="">
+
+    {% for m in models_of_mark %}
+    <div>
+
+        <ul type="none" class="list_model_1">
+            <a href="{{m.get_absolute_url}}">
+                <li>
+                    <figure style="width: 100%;">
+                        <img src="{{m.m_img.url}}" width="100%" height="250px" alt="" />
+                    </figure>
+
+                </li>
+                <li>
+                    <h1>{{mark}}:{{m.name}}</h1>
+                </li>
+                <li>
+                    <h2>model of {{m.model_of_year}}</h2>
+                </li>
+                <li>Weight:<strong>{{m.weight}}Tonn</strong></li>
+                <li>Speed:<strong>{{m.speed_km}} Km/h</strong></li>
+                <li>Engine Capacity:<strong>{{m.engine_capacity}} CC</strong></li>
+                <li>Price:<strong>{{m.price}}EGP</strong></li>
+                <li>made at {{m.date_of_made}}</li>
+            </a>
+        </ul>
+
+    </div>
+    {% endfor %}
+</div>
+
+{%else%}
+<h2 style="text-align: center;">NO models to display</h2>{% endif %} {% endblock %}
+<br>{% block body_2 %}
+
+
+
+
+
+
+
+</div> {% endblock %}
+<br>{% block bottom_menu %}{% include "bottom_menu.html" %} {% endblock %}
+<br>{% block scripts_area%}{% endblock %}

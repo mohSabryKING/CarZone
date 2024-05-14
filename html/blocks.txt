@@ -1,0 +1,8 @@
+{%extends 'home.html'%}
+{% block tit %}{% endblock %}
+{% block top_menu %}{% endblock %}
+{% block head_model %}{% endblock %}
+{% block body_1 %}{% endblock %}
+{% block body_2 %}{% endblock %}
+{% block bottom_menu %}{% endblock %}
+{% block scripts_area %}{% endblock %}

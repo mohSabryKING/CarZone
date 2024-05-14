@@ -1,0 +1,86 @@
+.bkg_model_1 {
+    animation-name: s1;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../static/img/car_1.jpg);
+}
+
+#im_1 {
+    animation-name: s1;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+#im_2 {
+    animation-name: s2;
+    animation-delay: 6s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+#im_3 {
+    animation-name: s3;
+    animation-delay: 9s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+#im_4 {
+    animation-name: s4;
+    animation-delay: 12s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+#im_5 {
+    animation-name: s5;
+    animation-delay: 15s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes s1 {
+    10% {
+        background-image: url(../../static/img/car_1.jpg);
+        animation-delay: 5s;
+    }
+    30% {
+        animation-delay: 5s;
+        background-image: url(../../static/img/car_7.jpg);
+    }
+    50% {
+        animation-delay: 5s;
+        background-image: url(../../static/img/car_5.jpg);
+    }
+    70% {
+        animation-delay: 5s;
+        background-image: url(../../static/img/car_3.jpg);
+    }
+    100% {
+        animation-delay: 5s;
+        background-image: url(../../static/img/car_2.jpg);
+    }
+}
+
+#id_user_img {
+    display: block;
+}
+
+.alt_comp {
+    FONT-WEIGHT: 200;
+    display: grid;
+    width: 100%;
+    /* padding: 10%; */
+    padding: 2%;
+    gap: 5%;
+    justify-items: unset;
+}
